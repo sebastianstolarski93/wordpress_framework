@@ -1,0 +1,91 @@
+// Mixinis LESS
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+.transform-rotate(@transform) {
+	-webkit-transform: rotate(@transform);
+		-moz-transform: rotate(@transform);
+			-o-transform: rotate(@transform);
+				-ms-transform: rotate(@transform);
+					transform: rotate(@transform);
+}
+.transform-scale(@scale) {
+	-webkit-transform: scale(@scale);
+		-moz-transform: scale(@scale);
+			-o-transform: scale(@scale);
+				-ms-transform: scale(@scale);
+					transform: scale(@scale);
+}
+.transition(@t1: all, @t2: 0.5s, @t3: ease-in){
+	-webkit-transition: @t1 @t2 @t3;
+    	-moz-transition: @t1 @t2 @t3;
+    		-o-transition: @t1 @t2 @t3;
+    			transition: @t1 @t2 @t3;
+}
+.box-sizing{
+  -webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  		box-sizing: border-box;
+}
+
+.gradient(@startColor: #fbb871, @endColor: @maincolor) {
+	background-color: @startColor;
+		background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+			background: -webkit-linear-gradient(top, @startColor, @endColor);
+				background: -moz-linear-gradient(top, @startColor, @endColor);
+					background: -ms-linear-gradient(top, @startColor, @endColor);
+						background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.iconFont {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.paddingSection {
+    padding: 60px 0 110px;
+}
+
+.marginTitleSection {
+    margin: 0 0 50px 0;
+}
+
+.marginTitle {
+    margin: 20px 0 10px;
+}
+
+.marginTitle2 {
+    margin: 20px 0;
+}
+
+.shown {
+    path {
+        stroke-width: .2;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: draw;
+        animation-timing-function: linear;
+        stroke: #000;
+        stroke-dasharray: 680;
+        stroke-dashoffset: 680;
+        animation-duration: 3s;
+        fill: #fff;
+    }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

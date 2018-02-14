@@ -1,0 +1,111 @@
+// widget styles
+
+.widget-item {
+    margin-bottom: 20px;
+    color: @black;
+    .boxhead {
+        margin-bottom: 10px;
+        font-size: 2.2rem;
+        font-family: "Oswald", "Arial", sans-serif;
+        font-weight: 300;
+    }
+    .tagcloud {
+        font-size: 2rem;
+        a {
+            color: @black;
+            font-size: 1.8rem !important;
+        }
+    }
+    .calendar_wrap {
+        #wp-calendar {
+        	width: 100%;
+        	font-size: 12px;
+        	font-weight: 300;
+        	border-collapse: separate;
+        	border-spacing: 8px;
+        	margin-left: -2px;
+        	caption {
+        		display: none;
+        	}
+        	tbody {
+        		td {
+        			margin-bottom: 10px;
+        			text-align: center;
+        			-webkit-border-radius: 2px;
+        			-moz-border-radius: 2px;
+        			-ms-border-radius: 2px;
+        			-o-border-radius: 2px;
+        			border-radius: 2px;
+        			border: 1px solid #f4f4f4;
+        			padding: 6px;
+        			&:hover {
+        				border-color: @black;
+        			}
+        			a {
+        				color: @maincolor;
+        			}
+        		}
+        		td.pad {
+        			border: 0;
+        		}
+        		td#today {
+        			color: @maincolor;
+        			border-color: @maincolor;
+        		}
+        	}
+        	tfoot {
+        		td#prev {
+        			a {
+        				color: #888;
+        				font-size: 12px;
+        				font-weight: 400;
+        				position: relative;
+        				text-transform: uppercase;
+        				bottom: -9px;
+        				margin-bottom: 1px;
+        				&:hover {
+        					color: #47C2DC;
+        				}
+        			}
+        			text-align: left;
+        		}
+        		td#next {
+        			a {
+        				color: #888;
+        				font-size: 12px;
+        				font-weight: 400;
+        				position: relative;
+        				text-transform: uppercase;
+        				bottom: -9px;
+        				margin-bottom: 1px;
+        				&:hover {
+        					color: #47C2DC;
+        				}
+        			}
+        			text-align: right;
+        		}
+        	}
+        	thead {
+        		th {
+        			font-size: 13px;
+        			font-weight: 400;
+        			color: #888;
+        			text-align: center;
+        			padding-bottom: 10px;
+        		}
+        	}
+        }
+    }
+    ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        li {
+            display: block;
+            margin: 0 0 10px 0;
+            a {
+                color: @maincolor;
+            }
+        }
+    }
+}

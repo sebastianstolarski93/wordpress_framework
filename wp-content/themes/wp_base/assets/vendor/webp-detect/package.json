@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "webp-detect",
+        "scope": null,
+        "escapedName": "webp-detect",
+        "name": "webp-detect",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/sebastian/public_html/flex_site/wp-content/themes/flex_base/assets"
+    ]
+  ],
+  "_from": "webp-detect@latest",
+  "_id": "webp-detect@1.0.4",
+  "_inCache": true,
+  "_location": "/webp-detect",
+  "_nodeVersion": "6.8.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/webp-detect-1.0.4.tgz_1476384625355_0.9925217169802636"
+  },
+  "_npmUser": {
+    "name": "bobrov1989",
+    "email": "bobrov1989@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "webp-detect",
+    "scope": null,
+    "escapedName": "webp-detect",
+    "name": "webp-detect",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/webp-detect/-/webp-detect-1.0.4.tgz",
+  "_shasum": "b65e3a47d53e526d3a6317c294e4af4f89baa8a3",
+  "_shrinkwrap": null,
+  "_spec": "webp-detect",
+  "_where": "/home/sebastian/public_html/flex_site/wp-content/themes/flex_base/assets",
+  "author": {
+    "name": "Vitaliy Bobrov"
+  },
+  "bugs": {
+    "url": "https://github.com/vitaliy-bobrov/webp-support/issues"
+  },
+  "dependencies": {},
+  "description": "Simple script to check browser support of webp images format.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "b65e3a47d53e526d3a6317c294e4af4f89baa8a3",
+    "tarball": "https://registry.npmjs.org/webp-detect/-/webp-detect-1.0.4.tgz"
+  },
+  "gitHead": "c441db9ee5a0a4f403badad4bcf4c9a6a361a665",
+  "homepage": "https://github.com/vitaliy-bobrov/webp-support#readme",
+  "keywords": [
+    "webp",
+    "images",
+    "performance",
+    "feature",
+    "detect"
+  ],
+  "license": "MIT",
+  "main": "webp.js",
+  "maintainers": [
+    {
+      "name": "bobrov1989",
+      "email": "bobrov1989@gmail.com"
+    }
+  ],
+  "name": "webp-detect",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliy-bobrov/webp-support.git"
+  },
+  "scripts": {},
+  "version": "1.0.4"
+}

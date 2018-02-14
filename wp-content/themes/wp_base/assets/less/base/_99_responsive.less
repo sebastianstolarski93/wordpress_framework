@@ -1,0 +1,467 @@
+// RWD style LESS
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+
+    header {
+        .navbar-collapse {
+            ul.nav {
+                li {
+                    a {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    #what-we-do {
+        .col-md-3 {
+            margin: 0 0 40px;
+        }
+    }
+    #what-we-do {
+        .col-md-4 {
+            margin: 10px 0;
+        }
+    }
+    .fx-wrapper-case {
+        .fx-desc-case {
+            .icon-case {
+                ul {
+                    li {
+                        width: 20%;
+                        i {
+
+                        }
+                    }
+                }
+            }
+            .color-case {
+                .choose-color {
+                    ul {
+                        li {
+                            span {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+
+    header {
+        .navbar-collapse {
+            &.hidden-sm {
+                display: none;
+            }
+            &.hidden-xs {
+                display: none !important;
+            }
+        }
+    }
+
+    #what-we-do {
+        .col-md-4 {
+            margin: 10px 0;
+        }
+    }
+
+    .fx-wrapper-case {
+        .fx-baner-cs {
+            .logo-works {
+                text-align: center;
+            }
+            .range-works {
+                text-align: center;
+            }
+            .desc-works {
+                text-align: justify;
+                margin-bottom: 40px;
+            }
+            .fx-mockup-macbook {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .btn {
+                margin: 20px 0 auto;
+            }
+        }
+        .fx-desc-case {
+            background-size: contain;
+            background-position-y: 300px;
+            .typo-case {
+                padding: 320px 0 100px;
+                .desc-typo {
+                    margin: 20px 0 0;
+                    max-width: none;
+                }
+            }
+            .color-case {
+                .choose-color {
+                    margin-bottom: 40px;
+                    h2 {
+                        text-align: center;
+                    }
+                    ul {
+                        padding: 0;
+                        text-align: center;
+                    }
+                }
+                .fx-mockup-macbook {
+                    min-height: auto;
+                    img {
+                        max-width: 100%;
+                        position: relative;
+                        right: auto;
+                        top: auto;
+                    }
+                }
+            }
+            .icon-case {
+                h2 {
+                    text-align: center;
+                }
+                ul {
+                    li {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+    .present-case {
+        .image {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+    img {
+        max-width: 100%;
+    }
+
+    header {
+        max-height: 100vh;
+        background-size: 80% auto, 40% auto;
+        .navbar-collapse {
+            &.hidden-sm {
+                display: none;
+            }
+            &.hidden-xs {
+                display: none !important;
+            }
+        }
+        .jumbotron {
+            h2 {
+                margin: 20vh 0 4vh;
+            }
+            h3 {
+                margin: 2vh 0 2vh;
+            }
+        }
+    }
+
+    #offer {
+        background-size: 80% auto,125% auto;
+        background-position: left bottom, right top;
+        .col-sm-6 {
+            margin: 0 0 40px;
+        }
+    }
+
+    #what-we-do {
+        .col-md-4 {
+            margin: 0 0 40px;
+        }
+    }
+    footer {
+        .col-xs-12 {
+            margin: 20px 0;
+            .col-xs-12 {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    #case-study .row .item ul li {
+        margin: 0 25px 25px 0;
+    }
+
+    #what-we-do i,
+    #offer i {
+        font-size: @iconMediumBig;
+    }
+
+    .fx-desc-reviews {
+        margin-bottom: 20px;
+    }
+
+    .full-width-text {
+        padding-bottom: 20px;
+        &#text2 {
+            padding-bottom: 20px;
+        }
+    }
+
+    .right-photo,
+    .left-photo {
+        padding-bottom: 20px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .fx-wrapper-case {
+        .fx-baner-cs {
+            .logo-works {
+                text-align: center;
+                img {
+                    max-width: 100%;
+                }
+            }
+            .range-works {
+                text-align: center;
+                ul {
+                    li {
+                        margin: 10px;
+                    }
+                }
+            }
+            .desc-works {
+                text-align: justify;
+                margin-bottom: 40px;
+            }
+            .fx-mockup-macbook {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .btn {
+                margin: 20px 0 auto;
+            }
+        }
+        .fx-desc-case {
+            background-size: contain;
+            background-position-y: 450px;
+            .typo-case {
+                padding: 320px 0 100px;
+                .desc-typo {
+                    margin: 20px 0 0;
+                    max-width: none;
+                }
+            }
+            .color-case {
+                .choose-color {
+                    margin-bottom: 40px;
+                    h2 {
+                        text-align: center;
+                    }
+                    ul {
+                        padding: 0;
+                        text-align: center;
+                        li {
+                            margin: 0 10px 10px;
+                        }
+                    }
+                }
+                .fx-mockup-macbook {
+                    min-height: auto;
+                    img {
+                        max-width: 100%;
+                        position: relative;
+                        right: auto;
+                        top: auto;
+                    }
+                }
+            }
+            .icon-case {
+                h2 {
+                    text-align: center;
+                }
+                ul {
+                    li {
+                        margin: 0 0 10px;
+                        width: 49%;
+                    }
+                }
+            }
+        }
+    }
+    .present-case {
+        .image {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .row-eq-height {
+        display: table;
+        [class*="col-"] {
+            float: none;
+            display: table-cell;
+            vertical-align: bottom;
+        }
+    }
+
+}
+
+@media screen and (max-height: 450px) {
+
+    header {
+        .jumbotron {
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+
+    .fx-timer {
+        .fx-inner-timmer {
+            div {
+                margin: 0 1rem;
+                width: 64px;
+                em {
+                    width: 50px;
+                    height: 70px;
+                    line-height: 70px;
+                    font-size: 2.5rem;
+                }
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    #baner1 {
+        background-position: 50% top;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .jumbotron {
+        padding-top: 10px;
+    }
+    .fx-timer {
+        .fx-inner-timmer {
+            div {
+                margin: 0 1rem;
+                width: 50px;
+                em {
+                    width: 40px;
+                    height: 55px;
+                    line-height: 55px;
+                    font-size: 2rem;
+                }
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .what form,
+    #text2 form {
+        flex-direction: column;
+        input,
+        button {
+            width: 100%;
+        }
+        input {
+            height: 40px;
+        }
+    }
+    .fx-wrapper-case {
+        .fx-desc-case {
+            background-position-y: 710px;
+            .icon-case {
+                ul {
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+
+    .fx-timer {
+        .fx-inner-timmer {
+            div {
+                margin: 0 1rem;
+                width: 40px;
+            }
+        }
+    }
+
+}
+@media screen and (max-height: 786px) {
+
+    header {
+        .fx-scroll {
+            height: 18vh;
+        }
+        .jumbotron {
+            .fx-title-slide {
+                margin: 10vh 0 5vh;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-height: 500px) {
+
+    header {
+        .fx-scroll {
+            height: 18vh;
+        }
+        .jumbotron {
+            .fx-title-slide {
+                margin: 0 0 5vh;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-height: 450px) {
+
+    header {
+        max-height: inherit;
+        height: 490px;
+        .fx-scroll {
+            height: 120px;
+        }
+    }
+
+}

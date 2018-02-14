@@ -1,0 +1,35 @@
+{
+  "name": "flex_wp",
+  "version": "1.0.0",
+  "description": "Base flex wp theme",
+  "main": "index.php",
+  "dependencies": {
+    "webp-detect": "^1.0.4",
+    "webp-support": "^1.0.3"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-minify": "^1.0.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-webp": "^2.3.0",
+    "modernizr": "^3.5.0",
+    "npm-modernizr": "^2.8.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlexCommerce/flexweb-framework.git"
+  },
+  "author": "Sebastian Stolarski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlexCommerce/flexweb-framework/issues"
+  },
+  "homepage": "https://github.com/FlexCommerce/flexweb-framework#readme"
+}

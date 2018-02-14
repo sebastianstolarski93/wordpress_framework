@@ -1,0 +1,165 @@
+// Main style for all pages
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    background-color: @black;
+    font-family: 'Roboto', 'Open Sans', 'Arial', sans-serif;
+}
+
+a {
+    color: @white;
+    &:hover {
+        color: @maincolor;
+    }
+}
+
+strong {
+    font-weight: 700;
+}
+
+.btn {
+    height: 40px;
+    padding: 0 20px;
+    font-size: @btnfontsize;
+    line-height: 40px;
+    color: @white;
+    .border-radius(3px);
+    border: 0;
+    background: @maincolor;
+    .box-shadow(none);
+    text-transform: uppercase;
+    font-size: @btnfontsize;
+    &:hover {
+        background-color: @fontcolor;
+        color: @maincolor;
+        -webkit-text-shadow: 0 1px 0 @maincolor;
+        -moz-text-shadow: 0 1px 0 @maincolor;
+        -ms-text-shadow: 0 1px 0 @maincolor;
+        -o-text-shadow: 0 1px 0 @maincolor;
+        text-shadow: 0 1px 0 @maincolor;
+    }
+}
+
+.btn-hover-red {
+    background-color: @maincolor;
+    color: @fontcolor;
+    -webkit-text-shadow: 0 1px 0 @fontcolor;
+    -moz-text-shadow: 0 1px 0 @fontcolor;
+    -ms-text-shadow: 0 1px 0 @fontcolor;
+    -o-text-shadow: 0 1px 0 @fontcolor;
+    text-shadow: 0 1px 0 @fontcolor;
+}
+
+.btn-black {
+    height: 40px;
+    padding: 0 20px;
+    font-size: @btnfontsize;
+    line-height: 40px;
+    color: @white;
+    .border-radius(3px);
+    border: 0;
+    background: @bgcolor;
+    .box-shadow(none);
+    text-transform: uppercase;
+    font-size: @btnfontsize;
+    &:hover {
+        background-color: @maincolor;
+        color: @white;
+        -webkit-text-shadow: 0 1px 0 @white;
+        -moz-text-shadow: 0 1px 0 @white;
+        -ms-text-shadow: 0 1px 0 @white;
+        -o-text-shadow: 0 1px 0 @white;
+        text-shadow: 0 1px 0 @white;
+    }
+}
+
+.fx-hide {
+    display: none;
+}
+
+.fx-active {
+    display: block;
+}
+
+header,
+footer,
+section {
+    .transition(all, .6s);
+    position: relative;
+}
+
+.fx-show-menu {
+    header,
+    footer,
+    section {
+        opacity: .4;
+        -webkit-transform: translate(-200px, 0);
+        -ms-transform: translate(-200px, 0);
+        transform: translate(-200px, 0);
+        .transition(all, .6s);
+    }
+    #fx-wrap-rwd-menu {
+        right: 0;
+        .transition(all, .6s);
+    }
+    #fx-toggle-rwd-menu {
+        span {
+            position: absolute;
+            .transition(all, .3s);
+            +span {
+                margin: 0 !important;
+            }
+            &:nth-of-type(1) {
+                .transform-rotate(45deg);
+                top: 24px;
+                left: 12px;
+            }
+            &:nth-of-type(2) {
+                .transform-rotate(-45deg);
+                top: 24px;
+                right: 12px;
+            }
+            &:last-child {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.wrap-404 {
+    background-color: #fff;
+    .paddingSection;
+    text-align: center;
+    .error-404 {
+        margin: 40px 0 20px;
+        em {
+            display: block;
+            font-size: 5rem;
+            line-height: 6rem;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        }
+        span {
+            display: block;
+            font-size: 10rem;
+            line-height: 11rem;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+        }
+    }
+    p {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+}
+
+.page {
+    background-color: @white;
+}

@@ -1,0 +1,7 @@
+.directory
+/.htaccess
+/.htpasswd
+wp-config.php
+/wp-config.php
+/wp-content/debug.log
+.idea

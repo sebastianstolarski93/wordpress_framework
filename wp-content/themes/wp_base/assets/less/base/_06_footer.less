@@ -1,0 +1,73 @@
+// Footer style LESS
+
+footer {
+    background-color: @bgcolor;
+    padding: 50px 0;
+    color: @white;
+    .fx-logo-footer {
+        display: block;
+        margin-bottom: 30px;
+    }
+    p {
+        margin: 0 0 15px;
+    }
+    h3 {
+        margin: 0 0 40px;
+        text-transform: uppercase;
+        font-size: 16px;
+        &:after {
+            content: '';
+            display: block;
+            width: 15%;
+            height: 2px;
+            margin: 11px 0 0;
+            background-color: @maincolor;
+        }
+    }
+    ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+        li {
+            display: block;
+            margin: 0 0 15px;
+        }
+    }
+    .fx-social {
+        h2 {
+            font-size: @headingSmall;
+        }
+        ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 10px 0 0;
+                a {
+                    i {
+                        font-size: @iconSmall;
+                    }
+                }
+            }
+        }
+    }
+    .fx-lang {
+        h2 {
+            font-size: @headingSmall;
+        }
+        select {
+            display: block;
+            width: 60%;
+            height: 30px;
+            padding: 0 10px;
+            border: 1px solid @fontcolor;
+            .border-radius(3px);
+            background-color: @white;
+            color: @fontcolor;
+            line-height: 30px;
+            outline: none;
+        }
+    }
+}
