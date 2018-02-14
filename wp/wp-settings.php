@@ -22,7 +22,7 @@ require_once( ABSPATH . WPINC . '/plugin.php' );
 
 /*
  * These can't be directly globalized in version.php. When updating,
- * we're including version.php from another install and don't want
+ * we're including version.php from another installation and don't want
  * these values to be overridden if already set.
  */
 global $wp_version, $wp_db_version, $tinymce_version, $required_php_version, $required_mysql_version, $wp_local_package;
@@ -68,26 +68,6 @@ timer_start();
 // Check if we're in WP_DEBUG mode.
 wp_debug_mode();
 
-/**
- * Filters whether to enable loading of the advanced-cache.php drop-in.
- *
- * This filter runs before it can be used by plugins. It is designed for non-web
- * run-times. If false is returned, advanced-cache.php will never be loaded.
- *
- * @since 4.6.0
- *
- * @param bool $enable_advanced_cache Whether to enable loading advanced-cache.php (if present).
- *                                    Default true.
- */
-if ( WP_CACHE && apply_filters( 'enable_loading_advanced_cache_dropin', true ) ) {
-	// For an advanced caching plugin to use. Uses a static drop-in because you would only want one.
-	WP_DEBUG ? include( WP_CONTENT_DIR . '/advanced-cache.php' ) : @include( WP_CONTENT_DIR . '/advanced-cache.php' );
-
-	// Re-initialize any hooks added manually by advanced-cache.php
-	if ( $wp_filter ) {
-		$wp_filter = WP_Hook::build_preinitialized_hooks( $wp_filter );
-	}
-}
 
 // Define WP_LANG_DIR if not set.
 wp_set_lang_dir();
@@ -293,6 +273,8 @@ require( ABSPATH . WPINC . '/vars.php' );
 // @plugin authors: warning: these get registered again on the init hook.
 create_initial_taxonomies();
 create_initial_post_types();
+
+wp_start_scraping_edited_file_errors();
 
 // Register the default theme directory root
 register_theme_directory( get_theme_root() );

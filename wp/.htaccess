@@ -11,3 +11,15 @@ RewriteRule ^ - [L]
 RewriteRule ^(wp-(content|admin|includes).*) wp/$1 [L]
 RewriteRule ^(.*\.php)$ wp/$1 [L]
 RewriteRule . index.php [L]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /wordpress_framework/wp/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /wordpress_framework/wp/index.php [L]
+</IfModule>
+
+# END WordPress
