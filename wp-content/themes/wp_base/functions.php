@@ -37,7 +37,7 @@ add_shortcode("get-page", "get_static_page");
 
 
 // [get-link id="id_page"]
-function get_page_link ($id_page) {
+function np_get_page_link ($id_page) {
 
 	$id_page = intval($id_page['id']);
 
@@ -45,7 +45,7 @@ function get_page_link ($id_page) {
 
 	return $link;
 }
-add_shortcode("get-link", "get_page_link");
+add_shortcode("get-link", "np_get_page_link");
 
 
 // [get-thumbnail]
@@ -62,7 +62,7 @@ add_shortcode("get-thumbnail", "get_post_thumbnail");
 
 
 // [get-attachment id="id-attachment"]
-function get_attachment_link ($id_attachment) {
+function np_get_attachment_link ($id_attachment) {
 
 	$id_attachment = intval($id_attachment['id']);
 
@@ -70,7 +70,7 @@ function get_attachment_link ($id_attachment) {
 
 	return $attachment_url;
 }
-add_shortcode("get-attachment", 'get_attachment_link');
+add_shortcode("get-attachment", 'np_get_attachment_link');
 
 // change <img> tag to <picture>
 add_filter('get_image_tag', 'image_tag_class', 10, 3);
@@ -109,33 +109,54 @@ function get_stylescheets () {
 		    $name_stylesheets = basename( $file );
 	    }
     }
-
-    wp_register_style("wp_style", WP_CONTENT_URL . '/themes/wp_base/assets/css/' . $name_stylesheets);
-    wp_enqueue_style("wp_style");
+    if ( isset($name_stylesheets) ) {
+        wp_register_style("wp_style", WP_CONTENT_URL . '/themes/wp_base/assets/css/' . $name_stylesheets);
+        wp_enqueue_style("wp_style");
+    }
 }
 add_action('wp_enqueue_scripts', 'get_stylescheets');
 
 
-// function add async script
+/*
+ *
+ * @Sebastian Stolarski - sebastolarski@gmail.com
+ *
+ * Function to add async script to website
+ * First script read the /assets/js folder and add all files to array
+ * Second load ONLY app.js file and init themeToolsInit() class
+ * Third pass into loadScriptTheme() method array with enque scripts and JS async load this into HTML
+ *
+ */
+
 function get_script () {
 
 	$dirCss = new DirectoryIterator(get_stylesheet_directory() . '/assets/js');
+	$arrScript = [];
 
 	foreach ($dirCss as $file) {
-		if ( pathinfo( $file, PATHINFO_EXTENSION ) == 'js' ) {
-			$name_javascript = basename( $file );
+		if ( pathinfo( $file, PATHINFO_EXTENSION ) == 'js' && $file->getFilename() != 'app.js' ) {
+            $arrScript[] = $_SERVER['REQUEST_URI'] . get_template_directory_uri() . '/assets/js/' . basename( $file );
 		}
 	}
 
+    $arrScript = json_encode($arrScript);
     ?>
-    <script>
-        (function() {
-            var fxScript = document.createElement("script");
-            fxScript.src = '<?= get_template_directory_uri() ?>/assets/js/<?= $name_javascript ?>'
+        <script>
+            (function () {
+                var netScript = document.createElement("script");
+                netScript.src = '<?= get_template_directory_uri() ?>/assets/js/app.js';
 
-            document.body.appendChild(fxScript)
-        }());
-    </script>
+                document.body.appendChild(netScript);
+            }());
+
+            var interval = setInterval(function () {
+                if (window.loadedNetApp) {
+                    clearInterval(interval);
+                    window.toolsTheme = new themeToolsInit();
+                    window.toolsTheme.loadScriptTheme(<?= $arrScript ?>);
+                }
+            })
+        </script>
     <?php
 
 }
@@ -171,15 +192,15 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 // register sidebar area
 
-function sidebar_widget_init () {
-    register_sidebar( array(
-        // sidebar data
-        // 'name' => 'Right sidebar',
-        // 'id' => 'right_sidebar',
-        // 'before_widget' => '<div class="widget-item">',
-        // 'after_widget' => '</div>',
-        // 'before_title' => '<h2 class="boxhead">',
-        // 'after_title' => '</h2>'
-    ) );
-}
-add_action("widgets_init", "sidebar_widget_init");
+//function sidebar_widget_init () {
+//    register_sidebar( array(
+//        // sidebar data
+//        // 'name' => 'Right sidebar',
+//        // 'id' => 'right_sidebar',
+//        // 'before_widget' => '<div class="widget-item">',
+//        // 'after_widget' => '</div>',
+//        // 'before_title' => '<h2 class="boxhead">',
+//        // 'after_title' => '</h2>'
+//    ) );
+//}
+//add_action("widgets_init", "sidebar_widget_init");
